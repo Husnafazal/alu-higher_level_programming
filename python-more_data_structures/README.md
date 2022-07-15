@@ -2,8 +2,7 @@
 Wrote a function that computes the square value of all integers of a matrix.
 1-Search_and_replace
 Wrote a function that replaces all occurrences of an element by another in a new list.
-2. Unique addition
-mandatory
+2-Unique_addition
 Wrote a function that adds all unique integers in a list (only once for each integer).
 3. Present in both
 mandatory

@@ -1,4 +1,5 @@
- the MyInt class"""
+#!/usr/bin/python3
+"""defines the MyInt class"""
 
 
 class MyInt(int):
@@ -11,16 +12,3 @@ class MyInt(int):
     def __ne__(self, value):
         """return true if the value and self are equal"""
         return super().__eq__(value)
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-B

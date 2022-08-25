@@ -1,20 +1,22 @@
 #!/usr/bin/python3
-"""list all states matching name argument(safe)"""
-import MySQLdb
-from sys import argv
+""" module list states
+from database"""
 
-if __name__ == '__main__':
-    user = argv[1]
-    password = argv[2]
-    db_name = argv[3]
-    state = argv[4]
-    db = MySQLdb.connect(host='localhost',
-                         port=3306,
-                         user=user,
-                         passwd=password,
-                         db=db_name)
+if __name__ == "__main__":
+    import MySQLdb
+    from sys import argv
+    # port and host are default local and 3306
+    db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE BINARY name = %s", (state,))
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    # vert input from users
+    # use string formating to be specific
+    cur.execute("SELECT * FROM states WHERE states.name = %s\
+    ORDER BY states.id ASC", (argv[4],))
+    result = cur.fetchall()
+    # check if second argument of tuple
+    # is same as the passed argument
+    for i in result:
+        print(i)
+    # close cursor and db
+    cur.close()
+    db.close():

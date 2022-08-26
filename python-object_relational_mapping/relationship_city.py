@@ -1,16 +1,13 @@
 #!/usr/bin/python3
-"""
-contains the class City
-"""
+"""module for the cities table model"""
 
-import sqlalchemy
 from sqlalchemy import Column, Integer, String, ForeignKey
-from relationship_state import Base, State
+from relationship_state import State, Base
 
 
 class City(Base):
-    """Representation of a city"""
-    __tablename__ = "cities"
+    """State model class for the states table"""
+    __tablename__ = 'cities'
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey('states.id'))

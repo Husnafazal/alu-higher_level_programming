@@ -9,4 +9,3 @@ request(process.argv[2], function (error, response, body) {
     fs.writeFileSync(process.argv[3], data, 'utf8');
   }
 });
-

@@ -11,4 +11,3 @@ function writeMe (file, content) {
   });
 }
 writeMe(file, content);
-

@@ -21,4 +21,3 @@ request(args[2], function (error, response, body) {
     console.log(dictUs);
   }
 });
-

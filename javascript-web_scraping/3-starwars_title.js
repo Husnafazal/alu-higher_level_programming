@@ -9,4 +9,3 @@ request(`https://swapi-api.hbtn.io/api/films/${args[2]}`, function (error, respo
     console.log(JSON.parse(body).title);
   }
 });
-
